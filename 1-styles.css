@@ -1,0 +1,38 @@
+a {
+    text-decoration: none;
+    color: rgb(212, 3, 3);
+    display: inline-block;
+}
+
+a::after {
+    content: "";
+    position: relative;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgb(212, 3, 3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+a::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: rgb(212, 3, 3);
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+a:hover::before {
+    transform: scaleX(0);
+}
